@@ -1,16 +1,79 @@
-# React + Vite
+# 📝 React Task Manager App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+🔗 **Live Demo:** https://react-task-manager-pied.vercel.app/
 
-Currently, two official plugins are available:
+A simple and modern **Task Manager application** built using **React**, **JavaScript**, and **CSS Modules**.  
+This app helps users manage daily tasks efficiently with a clean UI and smooth user experience.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## React Compiler
+## 🚀 Overview
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+The React Task Manager App allows users to organize their tasks by providing core task-management functionality such as adding, completing, and deleting tasks.
 
-## Expanding the ESLint configuration
+The project focuses on:
+- Simplicity
+- Clean component structure
+- Modular and maintainable styling using CSS Modules
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+---
+
+## ✨ Features
+
+- ✏️ **Add Tasks** – Create new tasks easily  
+- ✅ **Mark as Completed** – Track finished tasks  
+- 🗑️ **Delete Tasks** – Remove tasks when no longer needed  
+- ⚛️ **React Functional Components**  
+- 🎨 **CSS Modules** for scoped and maintainable styles  
+- 📱 **Responsive Design**  
+
+---
+
+## 🛠 Tech Stack
+
+| Technology | Description |
+|------------|------------|
+| React      | Frontend UI library |
+| JavaScript | Application logic |
+| CSS Modules | Component-scoped styling |
+| Vercel    | Deployment platform |
+
+---
+
+## 🔍 Live Preview
+
+Try the live application here:
+
+👉 **https://react-task-manager-pied.vercel.app/**
+
+No setup required — explore all features directly in the browser.
+
+---
+
+## ⚙️ How It Works
+
+1. Enter a task name in the input field  
+2. Click the add button to create a task  
+3. Mark tasks as completed when finished  
+4. Delete tasks you no longer need  
+
+The UI updates instantly using React state management.
+
+---
+
+## 📦 Getting Started (Local Setup)
+
+To run this project locally:
+
+```bash
+# Clone the repository
+git clone https://github.com/<your-username>/react-task-manager-pied.git
+
+# Navigate to the project directory
+cd react-task-manager-pied
+
+# Install dependencies
+npm install
+
+# Start the development server
+npm start
