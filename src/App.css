@@ -1,0 +1,278 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=SN+Pro:ital,wght@0,200..900;1,200..900&display=swap');
+
+/* =====================================================
+   GLOBAL THEME VARIABLES (LIGHT + DARK)
+===================================================== */
+:root {
+  --bg: #f5f6fa;
+  --card: #ffffff;
+  --soft: #f4f6fb;
+  --primary: #6366f1;
+  --accent: #38bdf8;
+  --success: #22c55e;
+  --warning: #f59e0b;
+  --danger: #ef4444;
+
+  --text-main: #1f2937;
+  --text-muted: #6b7280;
+
+  --border: #e5e7eb;
+  --radius: 14px;
+  --shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  --transition: all 0.25s ease;
+}
+
+body.dark {
+  --bg: #0f172a;
+  --card: #1e293b;
+  --soft: #020617;
+  --text-main: #e5e7eb;
+  --text-muted: #9ca3af;
+  --border: #334155;
+  --shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+}
+
+/* =====================================================
+   BASE RESET
+===================================================== */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text-main);
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    sans-serif;
+}
+
+/* =====================================================
+   APP LAYOUT
+===================================================== */
+.app {
+  min-height: 100vh;
+  padding: 1.5rem;
+}
+
+.app-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.app-title {
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+/* =====================================================
+   THEME TOGGLE BUTTON
+===================================================== */
+.theme-btn {
+  padding: 0.45rem 0.9rem;
+  border-radius: 8px;
+  border: 1px solid var(--border);
+  background: var(--card);
+  color: var(--text-main);
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.theme-btn:hover {
+  background: var(--soft);
+}
+
+/* =====================================================
+   FORM CONTROLS – DARK MODE VISIBILITY FIX
+===================================================== */
+input,
+select,
+textarea {
+  color: var(--text-main);
+  background-color: var(--soft);
+  border: 1px solid var(--border);
+}
+
+/* Placeholder text */
+input::placeholder,
+textarea::placeholder {
+  color: var(--text-muted);
+}
+
+/* Select dropdown options (CRITICAL FIX) */
+select option {
+  background-color: var(--card);
+  color: var(--text-main);
+}
+
+/* Focus state for accessibility */
+input:focus,
+select:focus,
+textarea:focus {
+  outline: none;
+  border-color: var(--primary);
+  box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.25);
+}
+
+/* =====================================================
+   TASK FORM
+===================================================== */
+.task-form {
+  display: flex;
+  gap: 0.75rem;
+  padding: 0.75rem;
+  background: var(--card);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  max-width: 640px;
+  margin: 1rem auto;
+}
+
+.task-input {
+  flex: 1;
+  padding: 0.85rem 1rem;
+  border-radius: 10px;
+  border: 1px solid var(--border);
+  background: var(--soft);
+  font-size: 1rem;
+  outline: none;
+  transition: var(--transition);
+}
+
+.task-input:focus {
+  border-color: var(--primary);
+  box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.15);
+  background: var(--card);
+}
+
+.task-button {
+  padding: 0.85rem 1.25rem;
+  border-radius: 10px;
+  border: none;
+  font-weight: 600;
+  cursor: pointer;
+  background: linear-gradient(135deg, #6366f1, #4f46e5);
+  color: white;
+  transition: var(--transition);
+}
+
+.task-button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* =====================================================
+   BOARD
+===================================================== */
+.board {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  max-width: 1400px;
+  margin: auto;
+}
+
+/* =====================================================
+   COLUMN
+===================================================== */
+.column {
+  background: var(--card);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  min-height: 70vh;
+}
+
+.column-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.column-title {
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+.column-count {
+  background: var(--soft);
+  color: var(--text-muted);
+  font-size: 0.75rem;
+  padding: 0.25rem 0.6rem;
+  border-radius: 999px;
+}
+
+.column-body {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+/* =====================================================
+   TASK CARD
+===================================================== */
+.task-card {
+  background: var(--card);
+  border-radius: var(--radius);
+  padding: 1rem;
+  box-shadow: var(--shadow);
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  transition: var(--transition);
+}
+
+.task-card:hover {
+  transform: translateY(-4px);
+}
+
+.task-title {
+  font-weight: 600;
+  word-break: break-word;
+}
+
+.task-select {
+  padding: 0.4rem 0.7rem;
+  border-radius: 8px;
+  border: 1px solid var(--border);
+  background: var(--soft);
+}
+
+.task-delete {
+  border: none;
+  background: transparent;
+  color: var(--text-muted);
+  cursor: pointer;
+}
+
+.task-delete:hover {
+  color: var(--danger);
+}
+
+/* =====================================================
+   RESPONSIVE
+===================================================== */
+@media (max-width: 1024px) {
+  .board {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  .board {
+    grid-template-columns: 1fr;
+  }
+
+  .task-form {
+    flex-direction: column;
+  }
+}

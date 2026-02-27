@@ -1,26 +1,26 @@
-import Column from "../Column/Column";
-import styles from "./Board.module.css";
 
-const columns = [
+import Column from "./Column";
+
+const COLUMNS = [
   { key: "todo", title: "To Do" },
   { key: "in-progress", title: "In Progress" },
   { key: "done", title: "Done" },
 ];
 
-function Board({ tasks, onStatusChange, onDelete }) {
+const Board = ({ tasks, onStatusChange, onDelete }) => {
   return (
-    <div className={styles.board}>
-      {columns.map((col) => (
+    <section className="board">
+      {COLUMNS.map((col) => (
         <Column
           key={col.key}
           title={col.title}
           status={col.key}
-          tasks={tasks.filter((t) => t.status === col.key)}
+          tasks={tasks.filter((task) => task.status === col.key)}
           onStatusChange={onStatusChange}
           onDelete={onDelete}
         />
       ))}
-    </div>
+    </section>
   );
 }
 

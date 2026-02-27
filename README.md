@@ -24,7 +24,7 @@ The project focuses on:
 - ✅ **Mark as Completed** – Track finished tasks  
 - 🗑️ **Delete Tasks** – Remove tasks when no longer needed  
 - ⚛️ **React Functional Components**  
-- 🎨 **CSS Modules** for scoped and maintainable styles  
+- 🎨 **CSS** for styles  
 - 📱 **Responsive Design**  
 
 ---
@@ -35,8 +35,8 @@ The project focuses on:
 |------------|------------|
 | React      | Frontend UI library |
 | JavaScript | Application logic |
-| CSS Modules | Component-scoped styling |
-| Vercel    | Deployment platform |
+| CSS        | Styling |
+| Vercel     | Deployment platform |
 
 ---
 
