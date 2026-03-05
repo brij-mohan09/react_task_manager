@@ -1,7 +1,10 @@
+import { useState, useContext } from "react";
+import { TaskContext } from "../context/TaskContext";
 
-import { useState } from "react";
+const TaskForm = () => {
 
-const TaskForm = ({ onCreate }) => {
+  const { createTask } = useContext(TaskContext);
+
   const [title, setTitle] = useState("");
 
   const handleSubmit = event => {
@@ -10,12 +13,13 @@ const TaskForm = ({ onCreate }) => {
     const trimmedTitle = title.trim();
     if (!trimmedTitle) return;
 
-    onCreate(trimmedTitle);
+    createTask(trimmedTitle);
     setTitle("");
   };
 
   return (
     <form className="task-form" onSubmit={handleSubmit} noValidate>
+
       <input
         type="text"
         className="task-input"
@@ -33,6 +37,7 @@ const TaskForm = ({ onCreate }) => {
       >
         Add
       </button>
+
     </form>
   );
 }
